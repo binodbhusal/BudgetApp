@@ -11,15 +11,15 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    @group.user = current_user
-    # Ensure that the icon is set from the params
+    @group.user_id = current_user.id
+
     @group.icon = params[:icon]
 
     if @group.save
       flash[:notice] = 'Category created'
       redirect_to groups_path
     else
-      puts @group.errors.full_messages # Add this line to see validation errors in the console
+      @group.errors.full_messages
       flash[:notice] = @group.errors.full_messages.join(', ')
       redirect_to request.referrer
     end

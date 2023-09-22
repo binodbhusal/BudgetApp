@@ -23,9 +23,10 @@
 - [📝 License](#license)
 
 
+![](https://github.com/binodbhusal/BudgetApp/blob/dev/budgetapp.gif)
 
   
-![](gif image link here)
+
 
 # 📖  Rails project - BudgetApp <a name="about-project"></a>
 
@@ -54,7 +55,7 @@
 - Budget Planning: Set personalized budgets for different expense categories and track progress toward financial goals.
 - Categorized Expenses: Organize expenses into categories such as groceries, utilities, entertainment, and more for better insights.
 ## 🚀 Live Demo <a name="live-demo"></a>
-[ Live Demo Link]()
+[ Live Demo Link](https://mybudgetapp-qm8w.onrender.com/)
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
@@ -93,9 +94,8 @@ To run the project, execute the following command:
 
  run rails server command 
 
-### Deployment
+ [Deployment](https://mybudgetapp-qm8w.onrender.com/)
 
-> Comming soon
 
 ## 👥 Authors <a name="getting-started"></a>
 
