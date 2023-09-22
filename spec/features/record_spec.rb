@@ -31,7 +31,7 @@ RSpec.feature 'Expense Record Details', type: :feature do
     fill_in 'Expense Name', with: 'New Expense Name'
     expect(page).to have_field('Amount')
     fill_in 'Amount', with: 20
-    click_button 'NEXT'
+    click_button 'Next'
     expect(page).to have_content('Record created')
   end
 end
