@@ -26,7 +26,7 @@
       <%= form.check_box :group_ids, { multiple: true, checked: group == @group }, group.id, nil %>
       <span style="margin-left:3%;padding:0;"><%= image_tag(group.icon || 'icons/01.jpg', alt: group.icon, class: "icon") %></span>
         <span style="margin-left:2%;font-family: 'ProximaNovaBold', sans-serif;
-        "><%= group.name %></span>
+        color: #686e76;"><%= group.name %></span>
         </li>
   <% end %>
   
