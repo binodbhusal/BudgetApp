@@ -1,0 +1,27 @@
+<nav>
+  <%= link_to raw('&#8592;'), groups_path, class: 'back-btn' %>
+  <h4>EXPENSE RECORD DETAILS</h4>
+  </nav>
+<div class="container">
+<div class="record-head">
+<span style="font-size:1.2rem;font-family: 'ProximaNovaLight', sans-serif;color: #686e76;"><%= image_tag (@group.icon || 'icons/01.jpg'), alt: @group.icon, class: "icon" %>
+<%= @group.name.capitalize%></span>
+<span style="font-size:1.2rem;font-family: 'ProximaNovaBold', sans-serif;color: #686e76;
+">TOTAL:$
+<%= @group.total_amount %></span>
+</div>
+
+<ul class="list-group" style="margin-top:2%;">
+<% @records.each do |record| %>
+  <li class="list-group-item" style="display:flex;justify-content:space-between;">
+   <span style="font-size:1.1rem;color: #686e76;"><%= record.name.capitalize %></span>
+    <span class="total-amount" style="font-family: 'ProximaNovaBold', sans-serif;color: #686e76;font-size:1.1rem">$<%= record.amount %></span>
+<% end %>
+</li>
+</ul>
+</div>
+
+<div class="cat-btn  category-section">
+
+<%= link_to "ADD RECORD", new_group_record_path(params[:group_id]), class: 'category-button' %>
+</div>
