@@ -14,8 +14,8 @@
 <ul class="list-group" style="margin-top:2%;">
 <% @records.each do |record| %>
   <li class="list-group-item" style="display:flex;justify-content:space-between;">
-   <span style="font-size:1.1rem;color: #686e76;"><%= record.name.capitalize %></span>
-    <span class="total-amount" style="font-family: 'ProximaNovaBold', sans-serif;color: #686e76;font-size:1.1rem">$<%= record.amount %></span>
+   <span style="font-size:1.1rem;color: #686e76;"><%= record.name.capitalize %><br><span style="font-size:14px;font-family:'ProximaNovaLight', sans-serif;"><%= record.created_at.strftime('%d %b %Y')%></span></span>
+    <span class="total-amount" style="font-family: 'ProximaNovaBold', sans-serif;color: #686e76;font-size:1.1rem">$<%= record.amount %></span><br>
 <% end %>
 </li>
 </ul>
