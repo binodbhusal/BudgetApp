@@ -1,0 +1,25 @@
+<!-- app/views/groups/new.html.erb -->
+<nav>
+  <%= link_to raw('&#8592;'), groups_path, class: 'back-btn' %>
+  <h4>ADD CATEGORY</h4>
+  </nav>
+<div class="container">
+<%= form_for @group, html: { multipart: true } do |f| %>
+  <div class="field">
+    
+    <%= f.text_field :name, placeholder:"Category Name", class:"category-input" %>
+  </div>
+  <div class="radio-icons">
+    <% @icons.each do |icon_url| %>
+      <label class="radio-label">
+        <%= radio_button_tag :icon, icon_url, id:nil %>
+        <%= image_tag(icon_url, alt: "Icon Image", class: "icon-img") %>
+      </label>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Next', class: 'save-category-button' %>
+  </div>
+<% end %>
+</div>

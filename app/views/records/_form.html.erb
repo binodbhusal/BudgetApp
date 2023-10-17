@@ -1,0 +1,38 @@
+<!-- app/views/records/_form.html.erb -->
+<%= form_with(model: [@group, @record], local: true) do |form| %>
+  <% if @record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@record.errors.count, 'error') %> prohibited this record from being saved:</h2>
+      <ul>
+        <% @record.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+
+    <%= form.text_field :name, placeholder:"Expense Name",class:"category-input" %>
+  </div>
+
+  <div class="field">
+
+    <%= form.text_field :amount, placeholder:"Amount",class:"category-input" %>
+  </div>
+  <ul class="list-group" style="margin-top:3%;">
+  <% @groups.each do |group| %>
+    <li class="list-group-item">
+      <%= form.check_box :group_ids, { multiple: true, checked: group == @group }, group.id, nil %>
+      <span style="margin-left:3%;padding:0;"><%= image_tag(group.icon || 'icons/01.jpg', alt: group.icon, class: "icon") %></span>
+        <span style="margin-left:2%;font-family: 'ProximaNovaBold', sans-serif;
+        color: #686e76;"><%= group.name %></span>
+        </li>
+  <% end %>
+  
+  </ul>
+  <div class="actions">
+    <%= form.submit 'Next' ,class: 'save-category-button'%>
+  </div>
+<% end %>
+

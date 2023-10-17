@@ -1,0 +1,23 @@
+<!-- app/views/groups/index.html.erb -->
+<nav>
+  <%= link_to raw('&#8592;'), root_path, class: 'back-btn' %>
+  <h4>CATEGORIES</h4>
+</nav>
+<div class="container">
+  <ul class="list-group">
+    <% @groups.each do |group| %>
+      <% if can? :read, group %>
+        <%= link_to group_records_path(group) do %>
+          <li class="list-group-item">
+            <%= image_tag group.icon, alt: 'Category Icon', class:"icon" %>
+            <div class="group-name"><%= group.name.capitalize %></div>
+            <span class="total-amount" style="color: #686e76;">$<%= group.total_amount %></span>
+          </li>
+        <% end %>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+<div class="cat-btn  category-section">
+  <%= link_to 'ADD NEW CATEGORY', new_group_path, class: 'category-button' %>
+</div>

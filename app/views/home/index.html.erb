@@ -1,0 +1,20 @@
+<div class="container">
+<% if user_signed_in? %>
+<div class="headline-container">
+  <p>Welcome, <%= current_user.name %></p>
+  <h1>BudgetApp</h1></div>
+ <div class="category-section"> 
+ <div class="category-content">
+  <%= link_to 'CATEGORIES', groups_path %></div>
+  <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: "btn-sign-out" %>
+  </div>
+  <% else %>
+  <div class="headline-container">
+  <p>Welcome</p>
+  <h1>BudgetApp</h1></div>
+  <div class="category-section"> 
+  <div class="category-content">
+  <%= link_to 'LOGIN', new_user_session_path %></div>
+ <%= link_to 'SIGN UP', new_user_registration_path, class: "btn-sign-out" %>
+<% end %>
+</div></div>
