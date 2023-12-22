@@ -1,0 +1,231 @@
+
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url("FontsFree-Net-Proxima-Nova-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: ProximaNovaBold;
+  src: url("FontsFree-Net-Proxima-Nova-Bold.otf") format("opentype");
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.category-section {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.category-content {
+  background-color: #3778c2;
+  width: 100%;
+  text-align: center;
+  padding: 1.5% 0;
+  margin-bottom: 1%;
+  color: #fff;
+  border-radius: 4px;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav h4 {
+  font-family: 'ProximaNovaBold', sans-serif;
+}
+
+.category-content a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-family: 'ProximaNovaLight', sans-serif;
+}
+
+.btn-sign-out {
+  font-size: 1.4rem;
+  font-family: 'ProximaNovaLight', sans-serif;
+  background: none;
+  border: none;
+  color: #686e76;
+}
+
+.container .headline-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'ProximaNovaBold', sans-serif;
+  font-size: 1.1rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.container .headline-container h1 {
+  color: #5fb530;
+}
+
+nav {
+  height: 4rem;
+  background-color: #3778c2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  font-size: 2rem;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+  margin-bottom: 1%;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.group-name {
+  margin-left: 4%;
+  font-size: 1.2rem;
+  color: #686e76;
+  font-family: 'ProximaNovaLight', sans-serif;
+}
+
+.icon {
+  width: 50px;
+  background-color: #5fb530;
+}
+
+.total-amount {
+  position: absolute;
+  right: 1.5%;
+  font-family: 'ProximaNovaBold', sans-serif;
+  font-size: 1.2rem;
+  color: #434b54;
+}
+
+.category-button {
+  background-color: #5fb530;
+  width: 80%;
+  padding: 0.8% 0;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 1.2rem;
+}
+
+.cat-btn {
+  width: 100%;
+  text-align: center;
+  padding: 1% 0;
+  background-color: #5fb530;
+  position: fixed;
+}
+
+.save-category-button {
+  position: absolute;
+  top: 2.3%;
+  right: 2%;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: 'ProximaNovaLight', sans-serif;
+}
+
+.radio-icons {
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 100%;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: auto auto auto;
+  border: 2px solid #3778c2;
+  margin-top: 3rem;
+  overflow-y: auto;
+  max-height: 100%;
+  border-radius: 6px;
+  height: 60vh;
+  align-items: center;
+  padding: 1% 6%;
+  overflow-x: hidden;
+}
+
+.icon-img {
+  width: 70px;
+  border: 1.5px solid #434b54;
+  border-radius: 50%;
+  padding: 2%;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-label input[type="radio"]:checked + .icon-img {
+  border: 2px solid  #5fb530;
+}
+
+.category-input {
+  width: 100%;
+  outline: none;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid #d3d3d3;
+}
+
+.category-input::placeholder {
+  font-size: 1.2rem;
+  color: #686e76;
+  font-family: 'ProximaNovaLight', sans-serif;
+}
+
+.record-head {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+::placeholder {
+  font-size: 1rem;
+}
+
+.log-input {
+  text-indent: 3%;
+}
+
+.bdtxt {
+  border-top: 1px solid #d3d3d3;
+}
+
+.forgetpass a {
+  color: #686e76;
+}
+
+.forgetpass {
+  text-align: center;
+}
+
+.notice {
+  display: flex;
+  background-color: #3778c2;
+  color: #d3d3d3;
+}

@@ -1,0 +1,33 @@
+
+<nav>
+  <%= link_to raw('&#8592;'),root_path, class: 'back-btn' %>
+  <h4>SIGN UP</h4>
+  </nav> 
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+  
+  <%= f.text_field :name, autofocus: true, autocomplete: "text", placeholder:"Full name",class:"category-input log-input bdtxt" %>
+</div>
+  <div class="field">
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email",class:"category-input log-input" %>
+  </div>
+
+  <div class="field">
+    
+   
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:'Password',class:"category-input log-input" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:'Password confirm',class:"category-input log-input" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Next" , class: 'save-category-button'%>
+  </div>
+<% end %>
+
+

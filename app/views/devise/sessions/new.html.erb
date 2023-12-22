@@ -1,0 +1,29 @@
+<nav>
+  <%= link_to raw('&#8592;'),root_path, class: 'back-btn' %>
+  <h4>LOG IN</h4>
+  </nav>  
+<div class ="login-page" style="margin-top:3%;">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email",class:"category-input log-input bdtxt"%>
+  </div>
+
+  <div class="field">
+
+    <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password",class:"category-input log-input"%>
+  </div>
+
+  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <p class="forgetpass">
+    <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+  </p>
+<% end %>
+
+
+  <div class="actions">
+    <%= f.submit "Log In",class: 'save-category-button' %>
+  </div>
+<% end %>
+
+</div>
